@@ -12,6 +12,12 @@ class Main extends React.PureComponent {
 
 		return (
 			<div className={"Main"}>
+				<h2>Portfolio</h2>
+				<img src={"../images/day.jpg"}/>
+				<div>technologies and used:</div>
+				<div>responsive for mobile / tablet / desktop</div>
+				<div>react redux libraries</div>
+				<div>request imate</div>
 				<Fragment>
 					<Filter>hello 3</Filter>
 					<div><NavLink to="/users">users</NavLink></div>
