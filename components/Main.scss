@@ -1,0 +1,12 @@
+@import "../scss/main";
+
+.Main{
+   color: green;
+   /* And other times this */
+   @media (min-width: 768px) and (max-width: 950px) {
+      color: red !important;
+   }
+   @media (min-width: 453px) and (max-width: 768px) {
+      color: blue !important;
+   }
+}
