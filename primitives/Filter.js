@@ -12,7 +12,7 @@ class Filter extends React.PureComponent {
 
     render(){
         return (   
-            <div>
+            <div className="FilterBlock">
                 {this.props.children}
             </div>)
     }

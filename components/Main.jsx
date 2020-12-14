@@ -19,4 +19,4 @@ class Main extends React.PureComponent {
 
 
 
-export default Block_MainPage;
+export default Main;
