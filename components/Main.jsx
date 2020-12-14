@@ -8,7 +8,7 @@ class Main extends React.PureComponent {
 		return (
 			<div className={"Block_Filter"}>
 				<Fragment>
-					<Filter>hello 2</Filter>
+					<Filter>hello 3</Filter>
 				</Fragment>
 			</div>
 		);
