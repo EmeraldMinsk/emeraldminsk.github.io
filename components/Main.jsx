@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import Filter from '../primitives/Filter';
+import Button from '../primitives/Button';
 import axios from "axios";
 import { NavLink } from 'react-router-dom';
 import {load,save} from "../redux/actions";
@@ -12,14 +12,27 @@ class Main extends React.PureComponent {
 
 		return (
 			<div className={"Main"}>
+				<div className={"topMenu"}>
+					<Button title="hello" cbClick={console.log} />
+				</div>
 				<h2>Portfolio</h2>
 				<img src={"../images/day.jpg"}/>
-				<div>technologies and used:</div>
-				<div>responsive for mobile / tablet / desktop</div>
-				<div>react redux libraries</div>
-				<div>request imate</div>
+				<h3>technologies and solutions used:</h3>
+				<ul>
+					<li>responsive design for mobile / tablet / desktop</li>
+					<li>simulated slow internet connection</li>
+					<li>used local storage for user settings</li>
+					<li>memoization</li>
+					<li>Using Mocks</li>
+					<li>sass preprocessor</li>
+					<li>react redux libraries</li>
+					<li>webpack</li>
+					<li>react-router-dom</li>
+				</ul>
+				
+				
+				
 				<Fragment>
-					<Filter>hello 3</Filter>
 					<div><NavLink to="/users">users</NavLink></div>
 				</Fragment>
 			</div>
