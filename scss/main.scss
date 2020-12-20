@@ -1,5 +1,44 @@
 @import "_normalize"; //! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css
 
+// variabled
+$mainFont: #35353b;
+
+// break point
+$breakPointS: 480px;
+$breakPointM: 768px;
+$breakPointX: 1024px;
+$breakPointXL: 1200px;
+
+@mixin BP_mobile {
+  @media (min-width: 0px) and (max-width: $breakPointS){
+    @content;
+  }
+}
+
+@mixin BP_tablet {
+  @media (min-width: $breakPointS) and (max-width: $breakPointM){
+    @content;
+  }
+}
+
+@mixin BP_laptop {
+  @media (min-width: $breakPointM) and (max-width: $breakPointX){
+    @content;
+  }
+}
+
+@mixin BP_desktop {
+  @media (min-width: $breakPointX) and (max-width: $breakPointXL){
+    @content;
+  }
+}
+
+@mixin BP_tv {
+  @media (min-width: $breakPointX) and (max-width: 999999px){
+    @content;
+  }
+}
+	
 html{
 	height: 100%;
 	min-width: 320px;
@@ -8,4 +47,6 @@ html{
 body {
 	font-family: 'Raleway';
 	height: 100%;
+	color: $mainFont;
 }
+
