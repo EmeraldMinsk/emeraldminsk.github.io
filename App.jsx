@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import 'babel-polyfill';
 
-import Main from './components/Main';
+import Main from './components/Main/Main';
 import Nav from './components/Nav';
-import List from './components/List';
+import List from './components/List/List';
 
 // redux
 import { Provider } from 'react-redux';

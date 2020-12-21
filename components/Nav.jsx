@@ -6,7 +6,7 @@ import {load,save} from "../redux/actions";
 import {connect} from "react-redux";
 import memoizeOne from 'memoize-one';
 
-// import './Nav.scss';
+import './Nav.scss';
 
 
 class Nav extends React.PureComponent {
@@ -24,9 +24,9 @@ class Nav extends React.PureComponent {
       {path: "/", title: "main"}
     ];
   	render() {
-      console.log('--+ NAV render', this.state.currentPath);
+
       return (
-        <div className={"Main"}>
+        <div className={"Nav"}>
           <div className={"topMenu"}>
             {this.links.map(it => (<NavLink key={it.path} onClick={() => this.setPath(it.path)} to={it.path}>{it.title}</NavLink>))}
             <div>slow internet</div>

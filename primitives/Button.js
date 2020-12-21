@@ -7,6 +7,7 @@ import './Button.scss';
 
 
 class Button extends React.PureComponent {
+    
     // Documentation
     static propTypes = {
       addClass: PropTypes.string,

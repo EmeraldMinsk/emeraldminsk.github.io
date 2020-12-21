@@ -1,6 +1,12 @@
-@import "../scss/main";
+@import "../../scss/main";
 
 .Main{
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   overflow: auto;
+
+   // DEL THIS DOWN
    .topMenu{
       display: flex;
       flex-direction: row;

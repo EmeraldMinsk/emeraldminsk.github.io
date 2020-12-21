@@ -1,8 +1,8 @@
 import React,{Fragment} from 'react';
-import Button from '../primitives/Button';
+import Button from '../../primitives/Button';
 import axios from "axios";
 import { NavLink } from 'react-router-dom';
-import {load,save} from "../redux/actions";
+import {load,save} from "../../redux/actions";
 import {connect} from "react-redux";
 import memoizeOne from 'memoize-one';
 
