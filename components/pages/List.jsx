@@ -1,12 +1,12 @@
 import React,{Fragment} from 'react';
-import Button from '../../primitives/Button';
+import Button from '../primitives/Button';
 import axios from "axios";
 import { NavLink } from 'react-router-dom';
 import {load,save} from "../../redux/actions";
 import {connect} from "react-redux";
 import memoizeOne from 'memoize-one';
 
-// import './Nav.scss';
+import './List.scss';
 
 
 class List extends React.PureComponent {
@@ -14,7 +14,7 @@ class List extends React.PureComponent {
 
 		return (
 			<div className={"List"}>
-				
+				List page
 			</div>
 		);
 

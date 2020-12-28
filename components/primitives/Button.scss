@@ -1,0 +1,21 @@
+@import "../../scss/main";
+
+.Button{
+   text-decoration: none;
+   display: block;
+   padding: 5px;
+   margin: 5px;
+   border-radius: 4px;
+   cursor: pointer;
+
+   &-darkTheme{
+      background-color: $bgButtonLight;
+      color: $darkFont;
+   }
+
+   &-lightTheme{
+      background-color: $bgButtonDark;
+      color: $lightFont;
+   }
+
+}

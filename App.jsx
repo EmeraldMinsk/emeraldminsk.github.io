@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import 'babel-polyfill';
 
-import Main from './components/Main/Main';
-import Nav from './components/Nav';
-import List from './components/List/List';
+import Main from './components/pages/Main';
+import {Navigation} from './components/Navigation';
+import List from './components/pages/List';
 
 // redux
 import { Provider } from 'react-redux';
@@ -24,7 +24,7 @@ ReactDOM.render(
   
 	<Provider store={store}>
       <BrowserRouter>
-        <Nav history={createBrowserHistory}>
+        <Navigation history={createBrowserHistory}>
           <Switch>
             <Route path="/list">
               <List />
@@ -33,7 +33,7 @@ ReactDOM.render(
               <Main />
             </Route>
           </Switch>
-        </Nav>
+        </Navigation>
       </BrowserRouter>
     
 	</Provider>

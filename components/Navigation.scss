@@ -1,0 +1,13 @@
+@import "../scss/main";
+
+.Navigation{
+     position: relative;
+     height: 100%;
+     overflow: hidden;
+     .topMenu{
+          display: flex;
+     }
+     .content{
+          color: red;
+     }
+}

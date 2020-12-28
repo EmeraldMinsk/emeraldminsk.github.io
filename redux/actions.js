@@ -1,42 +1,18 @@
-export const save = (e) => (dispatch, getState) => {
-  let {items} = getState();
-  
+import {
+	SET_THEME,
+	SET_SLOW_INTERNET
+} from '../constants/constants'
+
+export const setTheme = (e) => (dispatch, getState) => {
 	dispatch({
-		type: 'SAVE_VALUE',
+		type: SET_THEME,
 		payload: e
 	})
 }
-export const load = () => async (dispatch, getState) => {
-	
-	dispatch({
-        type: 'ITEMS_LOADING'
-	});
 
-	let answer;
-	try {
-		answer = await fetch('https://cors-anywhere.herokuapp.com/http://www.dota2.com/jsfeed/itemdata', {
-					method: 'GET',
-				});
-		
-	} catch (e) {
-		console.log('error', e);
-	}
-	if(answer===undefined){
-		setTimeout(() => {
-			dispatch({
-				type: 'ITEMS_LOADED',
-				payload: {someData:123}
-			})
-		  }, 2000)
-	}
-	else{
-		answer.json().then( data => {
-			setTimeout(() => {
-				dispatch({
-					type: 'ITEMS_LOADED',
-					payload: data
-				})
-			  }, 2000)
-		});
-	}
-};
+export const setSlowInternet = (e) => (dispatch, getState) => {
+	dispatch({
+		type: SET_SLOW_INTERNET,
+		payload: e
+	})
+}

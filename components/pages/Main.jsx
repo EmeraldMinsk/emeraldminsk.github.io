@@ -1,5 +1,4 @@
 import React,{Fragment} from 'react';
-import Button from '../../primitives/Button';
 import axios from "axios";
 import { NavLink } from 'react-router-dom';
 import {load,save} from "../../redux/actions";
@@ -13,13 +12,18 @@ class Main extends React.PureComponent {
   	render() {
 
 		return (
-			<div className={"Main"} style={{backgroundImage: "url('../../images/day.jpg')"}}>
+			<div className={"Main"} style={{backgroundImage: "url('../../images/images/day.jpg')"}}>
 				
-				<Button title />
 				<div>Portfolio</div>
 		
 				<h3>technologies and solutions used:</h3>
 				<ul>
+
+					<li>TODO</li>
+					<li> </li>
+					<li>Цитаты по таймауту рандомно</li>
+
+
 					<li>responsive design for mobile / tablet / desktop</li>
 					<li>html request</li>
 					<li>simulated slow internet connection (cover cases with slow connection)</li>
@@ -31,7 +35,8 @@ class Main extends React.PureComponent {
 					<li>react redux libraries</li>
 					<li>webpack</li>
 					<li>react-router-dom</li>
-					<li>React Component and React Hook realization</li>
+					<li>React Components, React Hooks</li>
+					<li>SVG icons (на кнопках)</li>
 					<li>--------</li>
 					<li>--------</li>
 					<li>--------</li>
@@ -86,7 +91,6 @@ export default connect((state) => ({
 }),
 (dispatch)=>{
 	return{
-		load: () => dispatch(load()),
-		save: (e) => dispatch(save(e))
+		load: () => dispatch(setTheme())
 	}
 })(Main);
