@@ -2,18 +2,27 @@
 
 .Button{
    text-decoration: none;
-   display: block;
+   position: relative;
    padding: 5px;
-   margin: 5px;
-   border-radius: 4px;
+   margin: 7px;
+   border-radius: 2px;
+   font-weight: 900;
    cursor: pointer;
 
+   padding-left: 22px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   
+   
    &-darkTheme{
+      border: 1px solid $darkFont;
       background-color: $bgButtonLight;
       color: $darkFont;
    }
 
    &-lightTheme{
+      border: 1px solid $lightFont;
       background-color: $bgButtonDark;
       color: $lightFont;
    }

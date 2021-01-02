@@ -8,12 +8,11 @@ import {isLightTheme} from '../../utils/utils';
 
 import './Button.scss';
 
-export const Button = ({addClass, title, cbClick, nav}) => {
+export const Button = ({addClass, title, cbClick, nav, icon}) => {
     const reduxTheme = useSelector(state => state.main.theme)
     const MEMOisLightTheme = React.useMemo(() => {
         return isLightTheme(reduxTheme);
     }, [reduxTheme]);
-
     return (
         nav 
             ? 
@@ -23,10 +22,12 @@ export const Button = ({addClass, title, cbClick, nav}) => {
             className={clsx("Button", addClass, MEMOisLightTheme ? 'Button-darkTheme' : 'Button-lightTheme')}
             onClick={(e) => cbClick(e, nav)}
         >
+            {icon ? icon : null}
             {title}
         </NavLink>
             : 
         <div className={clsx("Button", addClass, MEMOisLightTheme ? 'Button-darkTheme' : 'Button-lightTheme')} onClick={cbClick}>
+            {icon ? icon : null}
             {title}
         </div>
     );

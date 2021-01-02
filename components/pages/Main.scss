@@ -5,32 +5,42 @@
    background-repeat: no-repeat;
    background-size: cover;
    overflow: auto;
+   .Main{
+      &-day{
+
+      }
+      &-night{
+         
+      }
+      
+   }
+   
 
    // DEL THIS DOWN
-   .topMenu{
-      display: flex;
-      flex-direction: row;
-      @include BP_mobile {
-         flex-direction: column;
-      }
-      @include BP_tablet {
-         flex-direction: column;
-      }
-   }
+   // .topMenu{
+   //    display: flex;
+   //    flex-direction: row;
+   //    @include BP_mobile {
+   //       flex-direction: column;
+   //    }
+   //    @include BP_tablet {
+   //       flex-direction: column;
+   //    }
+   // }
    // break points
-   @include BP_mobile {
-      color: red !important;
-   }
-   @include BP_tablet {
-      color: green !important;
-   }
-   @include BP_laptop {
-      color: orange !important;
-   }
-   @include BP_desktop {
-      color: pink !important;
-   }
-   @include BP_tv {
-      color: blue !important;
-   }   
+   // @include BP_mobile {
+   //    color: red !important;
+   // }
+   // @include BP_tablet {
+   //    color: green !important;
+   // }
+   // @include BP_laptop {
+   //    color: orange !important;
+   // }
+   // @include BP_desktop {
+   //    color: pink !important;
+   // }
+   // @include BP_tv {
+   //    color: blue !important;
+   // }   
 }

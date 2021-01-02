@@ -1,13 +1,68 @@
 @import "../scss/main";
 
 .Navigation{
-     position: relative;
-     height: 100%;
-     overflow: hidden;
-     .topMenu{
-          display: flex;
-     }
-     .content{
-          color: red;
+     .Navigation{
+          &-main{
+               position: relative;
+               overflow: hidden;
+               height: 100%;
+          }
+          
+          &-topMenu{
+               top: 0;
+               height: 46px;
+               position: fixed;
+               width: 100%; 
+               box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          }
+          &-logo{
+               position: absolute;
+               width: 35px;
+               height: 29px;
+               left: 11px;
+               top: 8px;
+          }
+          &-buttons{
+               display: flex;
+               justify-content: center;
+               .Button:first-child{
+                    margin-left: 70px;
+               }
+          }
+          &-LightTheme{
+               background: $white;
+               border-top: 1px solid $black;
+               border-bottom: 1px solid $black;
+               color: $darkFont;
+          }
+          &-DarkTheme{
+               background: $black;
+               border-top: 1px solid $white;
+               border-bottom: 1px solid $white;
+               color: $lightFont;
+          }
+          &-content{
+               margin-top: 46px;
+               margin-bottom: 46px;
+          }
+
+          &-bottomBlock{
+               bottom: 0;
+               height: 46px;
+               position: fixed;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 100%;
+               font-weight: 900;
+               box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          }
+
+          &-svgIcon{
+               position: absolute;
+               top: 7px;
+               left: 4px;
+          }
+          
      }
 }
