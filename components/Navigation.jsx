@@ -57,7 +57,7 @@ export const Navigation = ({history, children}) => {
       <div
         className={clsx("Navigation-bottomBlock", MEMOisLightTheme ? 'Navigation-LightTheme' : 'Navigation-DarkTheme')}
         style={{backgroundImage: clsx(MEMOisLightTheme ? "url('../images/images/txDay.jpg')" : "url('../images/images/txNight.jpg')")}}
-      >2020</div>
+      >2020 (c)</div>
     </div>
   );
 }
