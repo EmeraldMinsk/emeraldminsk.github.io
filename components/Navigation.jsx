@@ -65,4 +65,3 @@ export const Navigation = ({history, children}) => {
 Navigation.propTypes = {
   history: propTypes.func
 }
-
