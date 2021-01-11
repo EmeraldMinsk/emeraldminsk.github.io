@@ -49,10 +49,11 @@ class Main extends React.PureComponent {
 					</div>
 					<div className={"Main-right"}>
 						<Button
-						 title={"REQUEST DATA"}
-						 fill={isLight ? 'white' : 'black'}
-						 nav={"/list"}
-						 cbClick={()=>console.log('1')}
+							addClass={"Main-request"}
+						  title={"REQUEST DATA"}
+							fill={isLight ? 'white' : 'black'}
+						  nav={"/list"}
+						  cbClick={()=>console.log('1')}
 						/>
 					</div>
 				</div>
