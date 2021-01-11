@@ -5,16 +5,29 @@
    background-repeat: no-repeat;
    background-size: cover;
    overflow: auto;
+   padding: 10px 12px;
    .Main{
+      &-container{
+         display: flex;
+         @include BP_mobile {
+            flex-direction: column-reverse;
+         }
+      }
       &-day{
-
+         color: $darkFont;
+         text-shadow: $lightShadow;
       }
       &-night{
-         
+         color: $lightFont;
+         text-shadow: $darkShadow;
+      }
+      &-title{
+         margin: 0;
+         font-size: 24px;
+         font-weight: 900;
       }
       
    }
-   
 
    // DEL THIS DOWN
    // .topMenu{
@@ -28,9 +41,7 @@
    //    }
    // }
    // break points
-   // @include BP_mobile {
-   //    color: red !important;
-   // }
+   
    // @include BP_tablet {
    //    color: green !important;
    // }

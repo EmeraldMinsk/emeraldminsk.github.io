@@ -19,14 +19,17 @@ export const Button = ({addClass, title, cbClick, nav, icon}) => {
         <NavLink 
             key={nav}
             to={nav}
-            className={clsx("Button", addClass, MEMOisLightTheme ? 'Button-darkTheme' : 'Button-lightTheme')}
+            className={clsx("Button", addClass, MEMOisLightTheme ? 'Button-darkTheme' : 'Button-lightTheme', icon && 'Button-withIcon')}
             onClick={(e) => cbClick(e, nav)}
         >
             {icon ? icon : null}
             {title}
         </NavLink>
             : 
-        <div className={clsx("Button", addClass, MEMOisLightTheme ? 'Button-darkTheme' : 'Button-lightTheme')} onClick={cbClick}>
+        <div
+            className={clsx("Button", addClass, MEMOisLightTheme ? 'Button-darkTheme' : 'Button-lightTheme', icon && 'Button-withIcon')}
+            onClick={cbClick}
+        >
             {icon ? icon : null}
             {title}
         </div>

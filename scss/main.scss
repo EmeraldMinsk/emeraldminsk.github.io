@@ -1,14 +1,18 @@
 @import "_normalize"; //! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css
 
 // variabled
+$white: #fff;
+$black: #000;
+
 $lightFont: #fdfdfd;
+$lightShadow: $white 1px 1px, $white -1px -1px, $white 1px -1px, $white -1px 1px;
 $darkFont: #35353b;
+$darkShadow: $black 1px 1px, $black -1px -1px, $black 1px -1px, $black -1px 1px;
 
 $bgButtonDark: #33323a;
 $bgButtonLight: #dddaea;
 
-$white: #fff;
-$black: #000;
+
 
 // break point
 $breakPointS: 480px;

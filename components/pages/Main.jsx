@@ -1,12 +1,10 @@
-import React,{Fragment} from 'react';
-import axios from "axios";
-import { NavLink } from 'react-router-dom';
+import React from 'react';
 import {connect} from "react-redux";
 import clsx from 'clsx';
 import memoizeOne from 'memoize-one';
-import {load,save} from "../../redux/actions";
 import propTypes from "prop-types";
 import {isLightTheme} from "../../utils/utils"
+import {Button} from '../primitives/Button';
 
 import './Main.scss';
 
@@ -20,71 +18,44 @@ class Main extends React.PureComponent {
 	render() {
 		const {reduxTheme} = this.props;
 		const isLight = this.MEMOisLightTheme(reduxTheme);
+		console.log('--+ isLight', isLight);
 		return (
-			<div className={clsx("Main", isLight ? "Main-day" : "Main-nigth")} style={{backgroundImage: clsx(isLight ? "url('../../images/images/day.jpg')" : "url('../../images/images/night.jpg')")}}>
-				<div>Portfolio</div>
+			<div className={"Main"} style={{backgroundImage: clsx(isLight ? "url('../../images/images/day.jpg')" : "url('../../images/images/night.jpg')")}}>
+				<div className={clsx("Main-container", isLight ? "Main-day" : "Main-night")}>
+					<div className={"Main-left"}>
+						<div className={"Main-title"}>Portfolio</div>
+						<div>technologies and solutions used:</div>
+						<dl>
+								<dd>TODO</dd>
+								
+								<dd>Цитаты по таймауту рандомно</dd>
+
+
+								<dd>responsive design for mobile / tablet / desktop</dd>
+								<dd>axios</dd>
+								<dd>simulated slow internet connection (cover cases with slow connection)</dd>
+								<dd>used local storage for user settings</dd>
+								<dd>memoization</dd>
+								<dd>Using Mocks (if connection issues)</dd>
+								<dd>prop types</dd>
+								<dd>sass preprocessor</dd>
+								<dd>react-redux</dd>
+								<dd>webpack</dd>
+								<dd>react-router-dom</dd>
+								<dd>React Components, React Hooks</dd>
+								<dd>SVG icons</dd>
 		
-				<h3>technologies and solutions used:</h3>
-				<ul>
-					
-					<li>TODO</li>
-					
-					<li>Цитаты по таймауту рандомно</li>
-
-
-					<li>responsive design for mobile / tablet / desktop</li>
-					<li>html request</li>
-					<li>simulated slow internet connection (cover cases with slow connection)</li>
-					<li>used local storage for user settings</li>
-					<li>memoization</li>
-					<li>Using Mocks (if connection issues)</li>
-					<li>prop types as documentation</li>
-					<li>sass preprocessor</li>
-					<li>react redux libraries</li>
-					<li>webpack</li>
-					<li>react-router-dom</li>
-					<li>React Components, React Hooks</li>
-					<li>SVG icons (на кнопках)</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-					<li>--------</li>
-				</ul>
-			
+						</dl>
+					</div>
+					<div className={"Main-right"}>
+						<Button
+						 title={"REQUEST DATA"}
+						 fill={isLight ? 'white' : 'black'}
+						 nav={"/list"}
+						 cbClick={()=>console.log('1')}
+						/>
+					</div>
+				</div>
 			</div>
 		);
 	}
