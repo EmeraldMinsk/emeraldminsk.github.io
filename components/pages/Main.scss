@@ -9,9 +9,22 @@
    .Main{
       &-container{
          display: flex;
+         padding-top: 20px;
          // break point
          @include BP_mobile {
             flex-direction: column-reverse;
+         }
+         @include BP_laptop {
+            width: 700px;
+            margin: 0 auto;
+         }
+         @include BP_desktop {
+            width: 700px;
+            margin: 0 auto;
+         }
+         @include BP_tv {
+            width: 700px;
+            margin: 0 auto;
          }
       }
       &-day{
@@ -24,18 +37,41 @@
       }
       &-title{
          margin: 0;
-         font-size: 24px;
+         font-size: 43px;
+         font-weight: 900;
+      }
+      &-subtitle{
+         margin: 0;
+         font-size: 30px;
          font-weight: 900;
       }
       &-request{
          height: 50px;
-         // break point
-         @include BP_mobile {
-            margin: 20px 0;
-            color: red;
+      }
+      &-left{
+         & dd{
+            padding-bottom: 7px;
          }
       }
-      
+      &-right{
+         // break point
+         @include BP_mobile {
+            padding: 30px 0;
+            margin: 0 auto;
+         }
+         @include BP_tablet {
+            padding: 50px;
+         }
+         @include BP_laptop {
+            padding: 100px;
+         }
+         @include BP_desktop {
+            padding: 150px 100px;
+         }
+         @include BP_tv {
+            padding: 150px 100px;
+         }
+      }
    }
 
    // DEL THIS DOWN

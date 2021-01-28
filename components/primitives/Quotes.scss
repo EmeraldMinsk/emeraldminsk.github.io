@@ -1,0 +1,21 @@
+@import "../../scss/main";
+
+.Quotes{
+   &-withIcon{
+      padding-left: 22px;
+   }
+   &-darkTheme{
+      border: 1px solid $darkFont;
+      background-color: $bgButtonLight;
+      color: $darkFont;
+      text-shadow: $lightShadow;
+   }
+
+   &-lightTheme{
+      border: 1px solid $lightFont;
+      background-color: $bgButtonDark;
+      color: $lightFont;
+      text-shadow: $darkShadow;
+   }
+
+}

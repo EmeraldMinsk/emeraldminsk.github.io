@@ -42,7 +42,7 @@ export const Navigation = ({history, children}) => {
         className={clsx("Navigation-topMenu", MEMOisLightTheme ? 'Navigation-LightTheme' : 'Navigation-DarkTheme')}
         style={{backgroundImage: clsx(MEMOisLightTheme ? "url('../images/images/txDay.jpg')" : "url('../images/images/txNight.jpg')")}}
       >
-        <img className={"Navigation-logo"} src={MEMOisLightTheme ? "../images/images/logoDay.png" : "../images/images/logoNight.png"} />
+        <img className={clsx("Navigation-logo", MEMOisLightTheme ? "Navigation-logoLight" : "Navigation-logoDark") } src={MEMOisLightTheme ? "../images/images/logoDay.png" : "../images/images/logoNight.png"} />
         <div className={"Navigation-buttons"}>
           {links.map(it => (<Button icon={<SvgList className={"Navigation-svgIcon "} fill={MEMOisLightTheme ? 'black' : 'white' } />} key={it.path} nav={it.path} cbClick={() => setPath(it.path)} title={it.title} />))}
           <Button icon={<SvgInternet className={"Navigation-svgIcon"} fill={MEMOisLightTheme ? 'black' : 'white' } />} cbClick={() => dispatch(setSlowInternet(!isSlowInternet))} title={`slow internet: ${isSlowInternet?'on':'off'}`} />

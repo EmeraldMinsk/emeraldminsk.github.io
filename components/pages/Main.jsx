@@ -5,6 +5,7 @@ import memoizeOne from 'memoize-one';
 import propTypes from "prop-types";
 import {isLightTheme} from "../../utils/utils"
 import {Button} from '../primitives/Button';
+import {Quotes} from '../primitives/Quotes';
 
 import './Main.scss';
 
@@ -18,36 +19,40 @@ class Main extends React.PureComponent {
 	render() {
 		const {reduxTheme} = this.props;
 		const isLight = this.MEMOisLightTheme(reduxTheme);
-		console.log('--+ isLight', isLight);
+
 		return (
 			<div className={"Main"} style={{backgroundImage: clsx(isLight ? "url('../../images/images/day.jpg')" : "url('../../images/images/night.jpg')")}}>
 				<div className={clsx("Main-container", isLight ? "Main-day" : "Main-night")}>
 					<div className={"Main-left"}>
 						<div className={"Main-title"}>Portfolio</div>
+						<div className={"Main-subtitle"}>React Developer</div>
+						<br/>
 						<div>technologies and solutions used:</div>
+						<br/>
 						<dl>
 								<dd>TODO</dd>
 								
 								<dd>Цитаты по таймауту рандомно</dd>
 
 
-								<dd>responsive design for mobile / tablet / desktop</dd>
-								<dd>axios</dd>
-								<dd>simulated slow internet connection (cover cases with slow connection)</dd>
-								<dd>used local storage for user settings</dd>
-								<dd>memoization</dd>
-								<dd>Using Mocks (if connection issues)</dd>
-								<dd>prop types</dd>
-								<dd>sass preprocessor</dd>
-								<dd>react-redux</dd>
-								<dd>webpack</dd>
-								<dd>react-router-dom</dd>
-								<dd>React Components, React Hooks</dd>
-								<dd>SVG icons</dd>
+								<dd>-) responsive design for mobile / tablet / desktop</dd>
+								<dd>-) axios</dd>
+								<dd>-) simulated slow internet connection (cover cases with slow connection)</dd>
+								<dd>-) used local storage for user settings</dd>
+								<dd>-) memoization</dd>
+								<dd>-) Using Mocks (if connection issues)</dd>
+								<dd>-) prop types</dd>
+								<dd>-) sass preprocessor</dd>
+								<dd>-) react-redux</dd>
+								<dd>-) webpack</dd>
+								<dd>-) react-router-dom</dd>
+								<dd>-) React Components, React Hooks</dd>
+								<dd>-) SVG icons</dd>
 		
 						</dl>
 					</div>
 					<div className={"Main-right"}>
+						<Quotes/>
 						<Button
 							addClass={"Main-request"}
 						  title={"REQUEST DATA"}

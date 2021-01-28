@@ -18,3 +18,17 @@ export const setTheme = (e) => {
 export const isLightTheme = (type) => {
   return type === Light;
 }
+
+// random
+export const randomNoPrevValue = (min, max, prevValue) => {
+  let result = null;
+  do{
+    result = Math.round(min - 0.5 + Math.random() * (max - min + 1));
+    
+    // can be -0
+    if(result===0){
+      result=0;
+    }
+  } while (result === prevValue);
+  return result;
+}
