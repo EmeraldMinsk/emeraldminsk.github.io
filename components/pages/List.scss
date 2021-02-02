@@ -1,5 +1,23 @@
 @import "../../scss/main";
 
 .List{
-   
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: auto;
+  &-darkTheme{
+    color: $darkFont;
+    text-shadow: $lightShadow;
+ }
+
+ &-lightTheme{
+    color: $lightFont;
+    text-shadow: $darkShadow;
+ }
+  .List{
+    &-container{
+      height: 100%;
+      width: 100%;
+    }
+  }
 }

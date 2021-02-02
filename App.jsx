@@ -6,7 +6,7 @@ import 'babel-polyfill';
 
 import Main from './components/pages/Main';
 import {Navigation} from './components/Navigation';
-import List from './components/pages/List';
+import {List} from './components/pages/List';
 
 // redux
 import { Provider } from 'react-redux';

@@ -1,19 +1,23 @@
 @import "../../scss/main";
 
 .Quotes{
+   width: 200px;
+   height: 60px;
+   margin-bottom: 10px;
+   // break point
+   @include BP_mobile {
+      width: 100%;
+   }
+
    &-withIcon{
       padding-left: 22px;
    }
    &-darkTheme{
-      border: 1px solid $darkFont;
-      background-color: $bgButtonLight;
       color: $darkFont;
       text-shadow: $lightShadow;
    }
 
    &-lightTheme{
-      border: 1px solid $lightFont;
-      background-color: $bgButtonDark;
       color: $lightFont;
       text-shadow: $darkShadow;
    }

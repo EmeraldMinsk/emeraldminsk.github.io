@@ -1,16 +1,17 @@
 import {
 	Light,
 	SET_THEME,
-	SET_SLOW_INTERNET
+	SET_SLOW_INTERNET,
+	SET_DATA_LOADING,
+	SET_DATA_LOADED
 } from '../../constants/constants';
-
 
 let initialState = {
 	theme: Light,
 	isSlowInternet: false,
-	// data: {},
-	// isFetching: false,
-	// isLoaded: false,
+	data: {},
+	dataLoading: false,
+	dataLoaded: false,
 };
 
 export default (state = initialState, action) => {
@@ -28,6 +29,22 @@ export default (state = initialState, action) => {
 				isSlowInternet: action.payload,
 			}
 		}
+		case SET_DATA_LOADING: {
+			return {
+				...state,
+				dataLoading: true,
+				dataLoaded: false
+			}
+		}
+		case SET_DATA_LOADED: {
+			return {
+				...state,
+				dataLoading: false,
+				dataLoaded: true,
+				data: action.payload
+			}
+		}
+
 		// case "ITEMS_LOADED": {
 		// 	return {
 		// 		...state,

@@ -55,7 +55,7 @@
                text-shadow: $darkShadow;
           }
           &-content{
-               height: 100%;
+               height: calc(100% - 96px);
                padding-top: 48px;
                padding-bottom: 48px;
           }

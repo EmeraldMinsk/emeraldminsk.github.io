@@ -5,7 +5,7 @@ import memoizeOne from 'memoize-one';
 import propTypes from "prop-types";
 import {isLightTheme} from "../../utils/utils"
 import {Button} from '../primitives/Button';
-import {Quotes} from '../primitives/Quotes';
+import Quotes from '../primitives/Quotes';
 
 import './Main.scss';
 
@@ -30,13 +30,9 @@ class Main extends React.PureComponent {
 						<div>technologies and solutions used:</div>
 						<br/>
 						<dl>
-								<dd>TODO</dd>
-								
-								<dd>Цитаты по таймауту рандомно</dd>
-
-
 								<dd>-) responsive design for mobile / tablet / desktop</dd>
 								<dd>-) axios</dd>
+								<dd>-) react-virtualized</dd>
 								<dd>-) simulated slow internet connection (cover cases with slow connection)</dd>
 								<dd>-) used local storage for user settings</dd>
 								<dd>-) memoization</dd>
@@ -48,13 +44,13 @@ class Main extends React.PureComponent {
 								<dd>-) react-router-dom</dd>
 								<dd>-) React Components, React Hooks</dd>
 								<dd>-) SVG icons</dd>
-		
+								<dd>-) search / sort data</dd>
 						</dl>
 					</div>
 					<div className={"Main-right"}>
-						<Quotes/>
+						<Quotes timerMS={5000} />
 						<Button
-							addClass={"Main-request"}
+							addClass={"Main-requestBtn"}
 						  title={"REQUEST DATA"}
 							fill={isLight ? 'white' : 'black'}
 						  nav={"/list"}

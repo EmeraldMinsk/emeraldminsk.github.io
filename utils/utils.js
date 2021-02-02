@@ -20,7 +20,8 @@ export const isLightTheme = (type) => {
 }
 
 // random
-export const randomNoPrevValue = (min, max, prevValue) => {
+export const randomNoPrevValue = (min, max, prevValue, setValue) => {
+  
   let result = null;
   do{
     result = Math.round(min - 0.5 + Math.random() * (max - min + 1));
@@ -30,5 +31,7 @@ export const randomNoPrevValue = (min, max, prevValue) => {
       result=0;
     }
   } while (result === prevValue);
-  return result;
+  console.log('--+ prevValue', prevValue);
+  console.log('--+ curValue', result);
+  setValue(result);
 }
