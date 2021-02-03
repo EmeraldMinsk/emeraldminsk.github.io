@@ -1,0 +1,46 @@
+@import "../../scss/main";
+
+.Slot{
+  cursor: pointer;
+  width: 100%;
+  height: 20px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+
+  &-darkTheme{
+    color: $darkFont;
+    text-shadow: $lightShadow;
+  }
+
+  &-lightTheme{
+    color: $lightFont;
+    text-shadow: $darkShadow;
+  }
+
+  .Slot-default {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    >span {
+      padding: 0 5px;
+    }
+  }
+
+  .Slot-name{
+    width: 30%;
+  }
+  .Slot-phone{
+    width: 20%;
+  }
+  .Slot-email{
+    width: 20%;
+  }
+  .Slot-location{
+    width: 15%;
+  }
+  .Slot-registered{
+    width: 15%;
+  }
+}

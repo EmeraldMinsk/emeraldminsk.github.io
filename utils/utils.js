@@ -31,7 +31,5 @@ export const randomNoPrevValue = (min, max, prevValue, setValue) => {
       result=0;
     }
   } while (result === prevValue);
-  console.log('--+ prevValue', prevValue);
-  console.log('--+ curValue', result);
   setValue(result);
 }

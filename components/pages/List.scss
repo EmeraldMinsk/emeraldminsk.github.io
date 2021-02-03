@@ -8,16 +8,18 @@
   &-darkTheme{
     color: $darkFont;
     text-shadow: $lightShadow;
- }
+  }
 
- &-lightTheme{
+  &-lightTheme{
     color: $lightFont;
     text-shadow: $darkShadow;
- }
-  .List{
-    &-container{
-      height: 100%;
-      width: 100%;
-    }
+    
   }
+  .List-container{
+    height: 100%;
+  }
+  .List-content{
+    height: calc(100% - 200px);
+  }
+
 }

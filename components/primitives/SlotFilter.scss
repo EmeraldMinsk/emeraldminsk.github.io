@@ -1,0 +1,58 @@
+@import "../../scss/main";
+
+.SlotFilter{
+  cursor: pointer;
+  width: 100%;
+  height: 20px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+
+  &-darkTheme{
+    color: $darkFont;
+    text-shadow: $lightShadow;
+  }
+
+  &-lightTheme{
+    color: $lightFont;
+    text-shadow: $darkShadow;
+  }
+  .SlotFilter-icon{
+    position: absolute;
+    top: 25px;
+    left: 5px;
+  }
+  .SlotFilter-wrap{
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+
+    
+    >span {
+      padding: 5px;
+      user-select: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+
+  .SlotFilter-name{
+    width: 30%;
+  }
+
+  .SlotFilter-phone{
+    width: 20%;
+  }
+  .SlotFilter-email{
+    width: 20%;
+  }
+  .SlotFilter-location{
+    width: 15%;
+  }
+  .SlotFilter-registered{
+    width: 15%;
+  }
+
+}

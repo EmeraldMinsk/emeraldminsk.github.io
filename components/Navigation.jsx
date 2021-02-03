@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from './primitives/Button';
+import {Modal} from './primitives/Modal';
 import clsx from 'clsx';
 import {setSlowInternet} from "../redux/actions";
 import propTypes from "prop-types";
@@ -11,9 +12,10 @@ import {SvgInternet} from '../images/svg/SvgInternet'
 import {SvgList} from '../images/svg/SvgList'
 
 export const Navigation = ({history, children}) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [currentPath, setCurrentPath] = React.useState('/');
   const theme = useSelector(state => state.main.theme)
+  const modal = useSelector(state => state.main.modalData)
   const isSlowInternet = useSelector(state => state.main.isSlowInternet)
   const reduxTheme = useSelector(state => state.main.theme)
   const MEMOisLightTheme = React.useMemo(() => {
@@ -38,6 +40,8 @@ export const Navigation = ({history, children}) => {
   ];
   return (
     <div className={"Navigation"}>
+      {/* Modal */}
+      {modal ? <Modal data={modal} /> : null}
       <div
         className={clsx("Navigation-topMenu", MEMOisLightTheme ? 'Navigation-LightTheme' : 'Navigation-DarkTheme')}
         style={{backgroundImage: clsx(MEMOisLightTheme ? "url('../images/images/txDay.jpg')" : "url('../images/images/txNight.jpg')")}}

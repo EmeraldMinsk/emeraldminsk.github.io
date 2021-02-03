@@ -3,20 +3,27 @@ import {
 	SET_THEME,
 	SET_SLOW_INTERNET,
 	SET_DATA_LOADING,
-	SET_DATA_LOADED
+	SET_DATA_LOADED,
+	SET_MODAL
 } from '../../constants/constants';
 
 let initialState = {
 	theme: Light,
 	isSlowInternet: false,
-	data: {},
+	data: [],
 	dataLoading: false,
 	dataLoaded: false,
+	modalData: null
 };
 
 export default (state = initialState, action) => {
 	switch(action.type) {
-		
+		case SET_MODAL: {
+			return {
+				...state,
+				modalData: action.payload,
+			}
+		}
 		case SET_THEME: {
 			return {
 				...state,
@@ -44,26 +51,6 @@ export default (state = initialState, action) => {
 				data: action.payload
 			}
 		}
-
-		// case "ITEMS_LOADED": {
-		// 	return {
-		// 		...state,
-		// 		isFetching: false,
-		// 		isLoaded: true,
-		// 		data: action.payload,
-		// 	}
-		// }
-		// case "ITEMS_WRITE_FROM_FUNC_TO_ITEMS": {
-		// 	//вложенность
-		// 	return {
-		// 		...state,
-		// 		some: action.payload,
-		// 		innerObj:{
-		// 			...state.innerObj,
-		// 			text:action.payload,
-		// 		}
-		// 	}
-		// }
 		default: return state;
 	}
 	return state;

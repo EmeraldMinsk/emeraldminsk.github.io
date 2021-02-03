@@ -1,0 +1,17 @@
+@import "../../scss/main";
+
+.SortIcon{
+   
+   &-darkTheme{
+      >svg{
+         fill: $darkFont;
+      }
+   }
+
+   &-lightTheme{
+      >svg{
+         fill: $lightFont;
+      }
+   }
+
+}
