@@ -30,21 +30,21 @@ class Main extends React.PureComponent {
 						<div>technologies and solutions used:</div>
 						<br/>
 						<dl>
-								<dd>-) responsive design for mobile / tablet / desktop</dd>
-								<dd>-) axios</dd>
-								<dd>-) react-virtualized</dd>
-								<dd>-) simulated slow internet connection (cover cases with slow connection)</dd>
-								<dd>-) used local storage for user settings</dd>
-								<dd>-) memoization</dd>
+								<dd>-) Responsive design for mobile / tablet / desktop</dd>
+								<dd>-) Axios</dd>
+								<dd>-) List virtualization</dd>
+								<dd>-) Simulated slow internet connection</dd>
+								<dd>-) Used local storage for user settings</dd>
+								<dd>-) Memoization</dd>
 								<dd>-) Using Mocks (if connection issues)</dd>
-								<dd>-) prop types</dd>
-								<dd>-) sass preprocessor</dd>
-								<dd>-) react-redux</dd>
-								<dd>-) webpack</dd>
-								<dd>-) react-router-dom</dd>
+								<dd>-) Prop types</dd>
+								<dd>-) Sass preprocessor</dd>
+								<dd>-) React-redux</dd>
+								<dd>-) Webpack</dd>
+								<dd>-) React-router-dom</dd>
 								<dd>-) React Components, React Hooks</dd>
 								<dd>-) SVG icons</dd>
-								<dd>-) search / sort data</dd>
+								<dd>-) Search / sort data</dd>
 						</dl>
 					</div>
 					<div className={"Main-right"}>

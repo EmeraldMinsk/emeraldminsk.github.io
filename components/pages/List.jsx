@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import propTypes from 'prop-types';
 import {Search} from '../primitives/Search';

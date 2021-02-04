@@ -33,3 +33,17 @@ export const randomNoPrevValue = (min, max, prevValue, setValue) => {
   } while (result === prevValue);
   setValue(result);
 }
+
+// convert date
+const convertWithZero = (e) => {
+  return e <= 9 ? `0${e}` : e;
+}
+
+export const convertDate = (e) => {
+  const date = new Date(e);
+  const y = date.getFullYear();
+  const m = date.getMonth()+1;
+  const d = date.getDate();
+
+  return `${y}-${convertWithZero(m)}-${convertWithZero(d)}`;
+}

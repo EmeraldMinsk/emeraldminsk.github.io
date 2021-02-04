@@ -9,7 +9,7 @@
       &-container{
          display: flex;
          padding: 20px 12px 10px 12px;
-         // break point
+         // break points
          @include BP_mobile {
             flex-direction: column-reverse;
          }
@@ -56,7 +56,7 @@
          }
       }
       &-right{
-         // break point
+         // break points
          @include BP_mobile {
             padding: 30px 0;
          }
@@ -74,30 +74,4 @@
          }
       }
    }
-
-   // DEL THIS DOWN
-   // .topMenu{
-   //    display: flex;
-   //    flex-direction: row;
-   //    @include BP_mobile {
-   //       flex-direction: column;
-   //    }
-   //    @include BP_tablet {
-   //       flex-direction: column;
-   //    }
-   // }
-   // break points
-   
-   // @include BP_tablet {
-   //    color: green !important;
-   // }
-   // @include BP_laptop {
-   //    color: orange !important;
-   // }
-   // @include BP_desktop {
-   //    color: pink !important;
-   // }
-   // @include BP_tv {
-   //    color: blue !important;
-   // }   
 }

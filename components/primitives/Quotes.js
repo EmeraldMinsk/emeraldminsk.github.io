@@ -3,8 +3,6 @@ import propTypes from 'prop-types';
 import clsx from 'clsx';
 import {connect} from "react-redux";
 import memoizeOne from 'memoize-one';
-import {useSelector} from 'react-redux';
-import { NavLink } from 'react-router-dom';
 
 import {isLightTheme, randomNoPrevValue} from '../../utils/utils';
 

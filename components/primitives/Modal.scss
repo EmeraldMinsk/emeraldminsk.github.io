@@ -6,14 +6,41 @@
    height: 100%;
    background: rgba(0,0,0,0.7);
    z-index: 10;
-   &-darkTheme{
-      color: $darkFont;
-      text-shadow: $lightShadow;
+
+   color: $lightFont;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &-wrapper{
+      background: rgba(0,0,0,0.7);
+      width: 530px;
+      height: 300px;
+
+      border: 1px solid white;
+      border-radius: 19px;
+      padding: 18px;
    }
 
-   &-lightTheme{
-      color: $lightFont;
-      text-shadow: $darkShadow;
+   &-photo{
+      width: 48px;
+      height: 48px;
+   }
+
+   &-header{
+      border-bottom: 1px solid $lightFont;
+   }
+
+   &-block{
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $lightFont;
+   }
+
+   &-cross{
+      cursor: pointer;
    }
 
 }

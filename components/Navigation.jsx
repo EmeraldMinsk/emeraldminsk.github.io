@@ -38,6 +38,7 @@ export const Navigation = ({history, children}) => {
     {path: "/", title: "main"},
     {path: "/list", title: "list"}
   ];
+
   return (
     <div className={"Navigation"}>
       {/* Modal */}

@@ -68,7 +68,8 @@ export class SvgBrush extends PureComponent {
 <g>
 </g>
 <g>
-</g></svg>
+</g>
+    </svg>
         )
     }
 }
